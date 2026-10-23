@@ -1,0 +1,12 @@
+diff --git a/itl80211/openbsd/net80211/ieee80211_input.c b/itl80211/openbsd/net80211/ieee80211_input.c
+index ff8d7cd..6e37aaf 100644
+--- a/itl80211/openbsd/net80211/ieee80211_input.c
++++ b/itl80211/openbsd/net80211/ieee80211_input.c
+@@ -1329,6 +1329,7 @@ ieee80211_amsdu_decap(struct ieee80211com *ic, mbuf_t m,
+             /* stop processing A-MSDU subframes */
+             ic->ic_stats.is_rx_decap++;
+             ml_purge(&subframes);
++            mbuf_freem(n);	/* free the remaining subframes too (matches OpenBSD) */
+             mbuf_freem(m);
+             return;
+         }
