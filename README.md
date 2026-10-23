@@ -1,5 +1,5 @@
 # Dell Latitude 7490 Hackintosh EFI
-# macOS 12.7.3 Monterey with Intel Wireless via AirportItlwm
+# macOS 12.7.3 Monterey with Intel Wireless via AirportItlwm, updated to resolve random kernel panic via wifi mbuf issue
 
 Dell 14" Latidude 7490 i5-8650U OpenCore configuration
 Has BootChime enabled, debug modes turned off, non verbose
@@ -26,8 +26,9 @@ macOS 12.7.3 Using latest OpenCore as of Feb 6, 2024
 7) Bluetooth
 8) USB-C Display Output
 9) Barrel Plug for Charging (Dell)
-10) iGPU Acceleration
-11) Native hotkey support with Fn keys
+10) USB-C for Charging
+11) iGPU Acceleration
+12) Native hotkey support with Fn keys
 
 ^_3.5mm headphone jack might not work properly after system wakes from sleep, reboot will resolve the issue._
 
